@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>pin_survey</name>
+			<sql><![CDATA[CREATE TABLE `pin_survey` (
+        `surveyid` int(11) NOT NULL DEFAULT '0',
+        `assignedid` INT(19) DEFAULT NULL,
+        `salesorderid` INT(19) DEFAULT NULL,
+        `surveystatus` VARCHAR(128) DEFAULT NULL,
+        `results` VARCHAR(512) DEFAULT NULL,
+        `attempt` TIMESTAMP NULL DEFAULT NULL,
+        PRIMARY KEY (`surveyid`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>pin_survey_operators</name>
+			<sql><![CDATA[CREATE TABLE `pin_survey_operators` (
+        `id` INT(11)
+      )]]></sql>
+		</table>
+	</tables>
+</schema>
